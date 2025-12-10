@@ -5,6 +5,7 @@ A simple Retrieval-Augmented Generation implementation using sentence embeddings
 ## Overview
 
 This notebook demonstrates core RAG concepts:
+
 1. Document embedding generation
 2. Semantic similarity computation
 3. Context retrieval based on queries
@@ -15,15 +16,18 @@ This notebook demonstrates core RAG concepts:
 ### Components
 
 **Document Database**
+
 - 15 machine learning concept documents
 - Structured storage with embeddings
 
 **Embedding Model**
+
 - Model: `all-MiniLM-L6-v2` (SentenceTransformer)
 - Dimension: 384
 - Fast and efficient for semantic search
 
 **Retrieval Mechanism**
+
 - Cosine similarity between query and document embeddings
 - Top-k document selection
 - Ranked by relevance score
@@ -31,14 +35,17 @@ This notebook demonstrates core RAG concepts:
 ### Workflow
 
 1. **Document Preparation**
+
    - Load knowledge base
    - Create structured database
 
 2. **Embedding Generation**
+
    - Convert documents to dense vectors
    - Store embeddings for retrieval
 
 3. **Query Processing**
+
    - Encode user query
    - Compute similarity with all documents
    - Retrieve top-k matches
@@ -86,16 +93,19 @@ interactive_query("What is supervised learning?", top_k=3)
 ## Implementation Details
 
 **Embedding Model**
+
 - Pre-trained on large text corpus
 - Captures semantic meaning
 - Efficient inference
 
 **Similarity Computation**
+
 ```
 similarity = (query_vector · doc_vector) / (||query_vector|| × ||doc_vector||)
 ```
 
 **Ranking**
+
 - Documents sorted by similarity score
 - Higher scores indicate better matches
 - Threshold filtering optional
@@ -103,6 +113,7 @@ similarity = (query_vector · doc_vector) / (||query_vector|| × ||doc_vector||)
 ## Results
 
 The notebook demonstrates:
+
 - Effective semantic retrieval
 - Query-document matching
 - Similarity score distributions
@@ -126,6 +137,7 @@ The notebook demonstrates:
 ## Extensions
 
 Possible enhancements:
+
 - Add more documents
 - Implement re-ranking
 - Use different embedding models
@@ -134,4 +146,4 @@ Possible enhancements:
 
 ---
 
-*Project for RAG and Information Retrieval coursework*
+_Project for RAG and Information Retrieval coursework_
